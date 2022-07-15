@@ -42,6 +42,21 @@ nav img {
     padding-top: 100px;
 }
 
+.fruits {
+  display: flex;
+  list-style: none;
+}
+
+.drinks {
+  display: flex;
+  list-style: none;
+}
+
+.hygiene {
+  display: flex;
+  list-style: none;
+}
+
 .products-content ul{
   display: flex;
   flex-wrap: wrap;

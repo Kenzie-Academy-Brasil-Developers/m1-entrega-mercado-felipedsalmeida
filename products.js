@@ -88,3 +88,108 @@ const products = [
     imageDescription: "",
   },
 ];
+
+function listProducts() {
+  return products.forEach(elemento => {
+    console.log(elemento)
+    if (elemento.category == "Frutas" ) {
+      let tagLi = document.createElement('li');
+      let tagImg = document.createElement('img');
+      let tagMain = document.createElement('main');
+      let tagH1 = document.createElement('h1');
+      let tagH5 = document.createElement('h5');
+      let tagStrong = document.createElement('strong')
+
+
+      tagLi.classList.add('product');
+      tagImg.classList.add('product-img');
+      tagMain.classList.add('product-main');
+      tagH1.classList.add('product-title');
+      tagH5.classList.add('product-category');
+      tagStrong.classList.add('product-price')
+            
+      if (elemento.image == undefined) {
+        tagImg.src = "./img/products/no-img.svg"
+      } else {
+        tagImg.src = elemento.image
+      };
+      tagImg.alt = elemento.imageDescription;
+      tagH1.innerText = elemento.title;
+      tagH5.innerText = elemento.category;
+      tagStrong.innerText = elemento.price
+
+
+      document.querySelector('.fruits').appendChild(tagLi);
+      tagLi.append(tagImg, tagMain);
+      tagMain.append(tagH1, tagH5, tagStrong);
+      
+    } else if (elemento.category == "Bebidas") {
+      let tagLi = document.createElement('li');
+      let tagImg = document.createElement('img');
+      let tagMain = document.createElement('main');
+      let tagH1 = document.createElement('h1');
+      let tagH5 = document.createElement('h5');
+      let tagStrong = document.createElement('strong')
+
+
+      tagLi.classList.add('product');
+      tagImg.classList.add('product-img');
+      tagMain.classList.add('product-main');
+      tagH1.classList.add('product-title');
+      tagH5.classList.add('product-category');
+      tagStrong.classList.add('product-price')
+            
+      if (elemento.image == undefined) {
+        tagImg.src = "./img/products/no-img.svg"
+      } else {
+        tagImg.src = elemento.image
+      };
+      tagImg.alt = elemento.imageDescription;
+      tagH1.innerText = elemento.title;
+      tagH5.innerText = elemento.category;
+      tagStrong.innerText = elemento.price
+
+
+      document.querySelector('.drinks').appendChild(tagLi);
+      tagLi.append(tagImg, tagMain);
+      tagMain.append(tagH1, tagH5, tagStrong);
+    
+    } else {
+      let tagLi = document.createElement('li');
+      let tagImg = document.createElement('img');
+      let tagMain = document.createElement('main');
+      let tagH1 = document.createElement('h1');
+      let tagH5 = document.createElement('h5');
+      let tagStrong = document.createElement('strong')
+
+
+      tagLi.classList.add('product');
+      tagImg.classList.add('product-img');
+      tagMain.classList.add('product-main');
+      tagH1.classList.add('product-title');
+      tagH5.classList.add('product-category');
+      tagStrong.classList.add('product-price')
+            
+      if (elemento.image == undefined) {
+        tagImg.src = "./img/products/no-img.svg"
+      } else {
+        tagImg.src = elemento.image
+      };
+      tagImg.alt = elemento.imageDescription;
+      tagH1.innerText = elemento.title;
+      tagH5.innerText = elemento.category;
+      tagStrong.innerText = elemento.price
+
+
+      document.querySelector('.hygiene').appendChild(tagLi);
+      tagLi.append(tagImg, tagMain);
+      tagMain.append(tagH1, tagH5, tagStrong);
+    }
+
+
+  })
+}
+
+listProducts()
+
+
